@@ -1,60 +1,115 @@
-% Define document class
-\documentclass[twocolumn]{aastex631}
+%\documentclass[referee]{aa} % for a referee version
+%\documentclass[onecolumn]{aa} % for a paper on 1 column  
+%\documentclass[longauth]{aa} % for the long lists of affiliations 
+%\documentclass[letter]{aa} % for the letters 
+\documentclass{aa}
+
+\usepackage{txfonts}
+\usepackage{natbib}
+
+\usepackage{graphicx}
+
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,allcolors=[rgb]{0,0,0.8}}
+
+
 \usepackage{showyourwork}
 
-% Begin!
-\begin{document}
+% the three lines suppress the hyperref 'link empty' warnings
+% explanation at: https://tex.stackexchange.com/questions/345764/journal-class-shows-package-hyperref-warning-suppressing-link-with-empty-targe
+\makeatletter
+\renewcommand*\aa@pageof{, page \thepage{} of \pageref*{LastPage}}
+\makeatother
 
-% Title
-\title{An open source scientific article}
+% text highlighting
+\usepackage{soul}
+\sethlcolor{yellow}
 
-% Author list
-\author{@mkenworthy}
 
-% Abstract with filler text
-\begin{abstract}
 
-asdf
+\begin{document} 
+\authorrunning{Kenworthy et al.}
+\titlerunning{ERIS gvAPP}
+  \title{The ERIS gvAPP Coronagraph: theoretical and on-sky performance}
 
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
-    Curabitur dictum gravida mauris, consectetuer id, vulputate a, magna.
-    Donec vehicula augue eu neque, morbi tristique senectus et netus et.
-    Mauris ut leo, cras viverra metus rhoncus sem, nulla et lectus vestibulum.
-    Phasellus eu tellus sit amet tortor gravida placerat.
-    Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
-    Praesent eget sem vel leo ultrices bibendum.
-    Aenean faucibus, morbi dolor nulla, malesuada eu, pulvinar at, mollis ac.
-    Curabitur auctor semper nulla donec varius orci eget risus.
-    Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
-    Duis eget orci sit amet orci dignissim rutrum.
-\end{abstract}
+   \author{Matthew A. Kenworthy
+          \inst{1}
+          \and
+          TBD
+          \inst{2}
+          }
 
-% Main body with filler text
-\section{Introduction}
-\label{sec:intro}
+   \institute{Leiden Observatory, University of Leiden,
+   PO Box 9513, 2300 RA Leiden, The Netherlands\\
+   \email{kenworthy@strw.leidenuniv.nl} \\
+   \and 
+      Astron Institute, Science Road, NL
+}
+   \date{Received XXXX; accepted XXXX}
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
-Curabitur dictum gravida mauris, consectetuer id, vulputate a, magna.
-Donec vehicula augue eu neque, morbi tristique senectus et netus et.
-Mauris ut leo, cras viverra metus rhoncus sem, nulla et lectus vestibulum.
-Phasellus eu tellus sit amet tortor gravida placerat.
-Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
-Praesent eget sem vel leo ultrices bibendum.
-Aenean faucibus, morbi dolor nulla, malesuada eu, pulvinar at, mollis ac.
-Curabitur auctor semper nulla donec varius orci eget risus.
-Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
-Duis eget orci sit amet orci dignissim rutrum.
+% \abstract{}{}{}{}{} 
+% 5 {} token are mandatory
+ 
+  \abstract
+  % context heading (optional)
+  % {} leave it empty if necessary  
+   {}
+  % aims heading (mandatory)
+   {We describe the gvAPP coroangraph for ERIS.}
+  % methods heading (mandatory)
+   {On sky observations from the commissioning run enabled characterisation of the gvAPP performance.}
+  % results heading (mandatory)
+   {Excellent matching with the prescribed pattern.
+   %
+   Different wavelength performance.}
+  % conclusions heading (optional), leave it empty if necessary 
+   {}
 
-Nam dui ligula, fringilla a, euismod sodales, sollici- tudin vel, wisi.
-Morbi auctor lorem non justo, nam lacus libero, pretium at, lobortis vitae.
-Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna.
-Morbi ac orci et nisl hendrerit mollis, suspendisse ut massa, cras nec ante.
-Pellentesque a nulla cum sociis natoque penatibus et magnis dis parturient.
-Aliquam tincidunt urna, nulla ullamcorper vestibulum turpis.
-Pellentesque cursus luctus mauris \citep{Luger2021}.
+   \keywords{instrumentation -- coronagraphs}
 
+   \maketitle
+%
+%-------------------------------------------------------------------
+
+   \section{Introduction}
+
+%\begin{figure}
+%%    \begin{centering}
+ %   \includegraphics[width=0.5\textwidth]{figures/gvapp_psf.pdf}
+ %   \caption{gvAPP psf as seen in ERIS.
+%              }
+%    \label{fig:erisapp}
+%    \script{plot_eris_gvapp_psf.py}
+%    \end{centering}
+%\end{figure}
+
+
+
+
+
+
+%\hl{We integrate the total luminosity of the infrared flux over the duration of the observations, and we derive a total energy output of XXXXX Joules.}
+%a collision.
+%
+
+%------------------------
+\section{Conclusions}\label{sec:conclusion}
+
+
+\begin{acknowledgements}
+
+This research has used the SIMBAD database, operated at CDS, Strasbourg, France \citep{wenger2000}.
+%
+This work has used data from the European Space Agency (ESA) mission {\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}).
+%
+Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the {\it Gaia} Multilateral Agreement.
+%
+To achieve the scientific results presented in this article we made use of the \emph{Python} programming language\footnote{Python Software Foundation, \url{https://www.python.org/}}, especially the \emph{SciPy} \citep{virtanen2020}, \emph{NumPy} \citep{numpy}, \emph{Matplotlib} \citep{Matplotlib}, \emph{emcee} \citep{foreman-mackey2013}, and \emph{astropy} \citep{astropy_1,astropy_2} packages.
+%
+\end{acknowledgements}
+
+\bibliographystyle{aa}
 \bibliography{bib}
 
 \end{document}
