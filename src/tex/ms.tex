@@ -8,6 +8,7 @@
 \usepackage{natbib}
 
 \usepackage{graphicx}
+\usepackage{subcaption}
 
 \usepackage{color}
 \usepackage{hyperref}
@@ -112,27 +113,116 @@ It is composed of two parts, the integral field spectrograph SPIFFIER (REF) and 
 
 \hl{MAK, DD}
 
-Phase pattern
+\begin{itemize}
+    \item The ERIS gvAPP designed in 2018
+    
+    \item The design steps follow \cite{2021ApOpt..60D..52D}
+    \item The design takes advantage of the small spiders and relatively small central obscuration with an aggressive design contrast at a small IWA.
+    \item The vAPP is also a cold stop.  To account for pupil wander and drifts, the pupil was undersized.  
+    \item The dark zones are broadened in the grating direction to account for wavelength smearing.
+    \item The direction of the grating and dark zones was chosen to  minimize the impact of spider diffraction in the dark zone, which would reduce the design Strehl ratio.
+    \item The grating has 25 cycles over the diameter, resulting in a 25 $\lambda/D$ separation between the coronagraphic PSF and the leakage term. This separation was chosen to minimize the impact of the leakage PSF intensity and account for the width of the dark zones.
+    \item Lower-intensity reference PSFs the same separation but rotated  90 degrees have been added as an astrometric and photometric reference.
+    \item  The coronagraphic PSFs have additional dark zones underneath the leakage term and reference PSFs to reduce the impact of residual aberrations on their photometry.
 
-The goal IWA, OWA, contrast level
+\end{itemize}
 
-determining the separation of the PSFs
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/ERIS_phase_place_holder.png}
+    \caption{The ERIS gvAPP phase pattern design and and simulated PSF.}
+    \label{fig:gvAPP_phase}
+\end{figure}
+
+\begin{table}[h!]
+\label{tab:design_param}
+\caption{Design parameter values of the ERIS gvAPP}
+\begin{tabular}{c|c|c|c|c|c}
+     Design & IWA & IWA & OWA & OWA  & Strehl\\
+     parameter&& contrast&& contrast&\\
+     \hline     
+     &$[\lambda/D]$& &$[\lambda/D]$ & & [\%]\\
+    \hline
+     Value & 2.2 &  $10^{-4}$ &15 &  $10^{-5}$ & 50.9\\
+\end{tabular}
+\end{table}
 
 \section{Optical construction of the gvAPP}
 
 \hl{MAK, DD}
+\begin{itemize}
+    \item Component manufactured by ImagineOptix in 2018
+    \item Two components manufactured, spare has slightly worse quality.
+\end{itemize}
 
-Optical layering
+\textbf{Optical layering, flatness, wedge}
+\begin{itemize}
+    \item The optics stack of the gvAPP consists of four individual substrates glued together.
+    \item The number of substrates needed to be four due to manufacturing limitations and instrument constraints.
+    \begin{itemize}
+        \item The AR-coating could not be applied to the opposite side of the aluminium mask.
+        \item The liquid-crystal film could not be applied on the wedged substrate.
+    \end{itemize}
+    \item Amplitude mask is Aluminum thickness about 300 nm, OD > 4.
+    \item The wedge is pointing North South, orthogonal to the grating
+    \item The stack thickness is 7.55/7.39 mm (top, bottom), as measured with calipers. Resulting wedge angle is 0.44 degrees.
+    \item The overall diameter is 20.95 mm.
+    \item Centricity of clear aperture: Part A: 0.020 mm from center of 21 mm substrates
+    \item Anti-reflection coatings are each $< 0.5$ \% average reflectance, verified by vendor
+    \item Glue is NOA-61, aged 10-hrs at 50°C.
+\end{itemize}
 
-Flatness
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/gvAPP_stack.png}
+    \caption{The ERIS gvAPP optical layering.}
+    \label{fig:optical_layering}
+\end{figure}
 
-Wedge
+\begin{figure}
+\centering
+\begin{subfigure}{.25\textwidth}
+  \centering
+    \includegraphics[width=0.9\textwidth]{figures/ERIS_gvAPP_image.png}
+\end{subfigure}%
+\begin{subfigure}{.25\textwidth}
+  \centering
+    \includegraphics[width=0.915\textwidth]{figures/microscope_image.png}
+  \label{fig:microscope_image}
+  \label{fig:sub2}
+\end{subfigure}
+    \caption{Left: Image of the manufactured ERIS gvAPP. Right: Three stitched microscope images of the ERIS gvAPP between crossed polarizers. Images from ImagineOptix. }
+\label{fig:test}
+\end{figure}
 
-Glue transmission
+\textbf{Transmission curve}
+\begin{itemize}
+    \item Both the glue and liquid crystal layers display absorption features in the thermal infrared and result in an average 2-5 $\mu$m transmission of 61.3\%. 
+    \item The transmission was measured in the clear aperture and includes all substrates, glue layers, LCP layer, and anti-reflection coatings.
+    \item A comparable transmission curve of the LBT dgvAPP can be found in \cite{2022AJ....163..217D}. 
+    \item The overall transmission in is $\sim 90\%$ in K-band, $\sim 50\%$ in L-band, $\sim 40\%$ in M-band. 
+    \item The absorption feature at $3.3 \mu$m goes to 0\% transmission, rendering L-short observations ineffective. This absorption feature is caused by absorption in both the glue and liquid-crystal layers.
+    \item The significant absorption in L-band and M-band will impact the gvAPP performance by increasing the photon noise of the thermal background.
+\end{itemize}
 
-subsection{Compared with cryogenic tests}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/Transmission_gvAPP.png}
+    \caption{Transmission of the gvAPP as a function of wavelength. }
+    \label{fig:optical_layering}
+\end{figure}
+
+\section{Summary cryogenic tests}
 
 \hl{MAK, DD}
+
+\begin{itemize}
+    \item gvAPP was tested at ETH Zurich cryogenic testbed \citep{2018SPIE10702E..3YB,2021JATIS...7d5001B}. 
+    \item The testbed was operated using a narrowband filter centered at 2.006 $\mu$m with a full width at half maximum of 0.045 $\mu$m.  
+    \item The first cryogenic tests confirmed  that the morphology, overall throughput, and core intensity of the gvAPP PSF compared with a nominal VLT PSF is consistent with the theoretical predictions.
+    \item After upgrades of the cryogenic testbed, it was discovered that the measured gvAPP PSF had a reduced dark zone contrast compared to the theoretical PSF. In the paper the authors find that the dark zone contrast was limited by the testbed itself instead of the gvAPP optical quality. The reduction in contrast can be explained by optical surface polishing errors with a power-law power spectral density, combine with some defocus and jitter.
+\end{itemize}
 
 Anne Boehle discussion from her paper
 
@@ -166,10 +256,24 @@ Total throughput curve
 
 \section{On-sky PSF comparison with model PSF}
 
-\
-
 
 \subsection{narrow band PSF on-sky}
+
+\subsection{Current measured on-sky}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/app_psf_model_lab_sky.pdf}
+    \caption{Todo.}
+    \label{fig:app_psf_comp}
+\end{figure*}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/pupil_image_lp.pdf}
+    \caption{Todo.}
+    \label{fig:lprime_cc}
+\end{figure}
 
 \hl{JH, FD}
 
@@ -181,7 +285,9 @@ DD to meet with Ben Sutlieff Friday 14:00
 
 left/right PSF brightness is not the same. hints at circular instrumentation systematics in ERIS???
 
-Structure in the telescope pupil shows striping simialt to the grating for the gvAPP - some weird polarization structure in there.
+Structure in the telescope pupil shows striping similar to the grating for the gvAPP - DD confirmed in 15/08/2024 email that these fringes are in the pattern (they create the reference holograms), and so a bit of Fresnel propagation will likely give the intensity variations.
+
+Should look into why the spiders are so much thicker and what the bright ring is. Suspect this not only Fresnel propagation.
 
 \subsection{Wavelength performance predicted and measured}
 \hl{JH, FD, MAK}
@@ -189,13 +295,32 @@ Structure in the telescope pupil shows striping simialt to the grating for the g
 \section{Contrast curves}
 
 \subsection{Current measured on-sky}
-\hl{JH, FD, DD}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/Contrast_curve_HR8799_Br-cont.pdf}
+    \caption{Todo.}
+    \label{fig:lprime_cc}
+\end{figure}
+
+\hl{JH, FD, DD, BS}
+
+Include K-peak data from B.S.
 
 \subsection{Predicted performance for broad bands}
 \hl{JH, FD, DD}
+Idea: take the contrast curve in K-peak (from BS), extrapolate it to the Kband (using the higher bandpass, and ignoring the changing sky background).
 
 %------------------------
 \section{Conclusions}\label{sec:conclusion}
+
+
+\begin{itemize}
+    \item gvAPP works to the design described, beamswitches perfectly, very easy to use.
+    \item gvAPP successfully pushes diffraction halo below the wind driven halo from the atmosphere and AO system performance.
+    \item L band limited by large sky background from warm optics in ERIS optical path and poor transmission due to multiple glue layers in ERIS gvAPP.
+    \item Detector pattern noise and artifacts limit the K band reduction
+    \item Future ELT instruments will minimise glue layers and increase strehl ratio for the same PSF contrast to improve planet throughput.
+\end{itemize}
 
 \subsection{Impact on future designs for ELT class telescopes}
 
@@ -225,4 +350,3 @@ To achieve the scientific results presented in this article we made use of the \
 \bibliography{bib}
 
 \end{document}
-
