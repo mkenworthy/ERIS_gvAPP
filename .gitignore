@@ -2,7 +2,8 @@
 **/.snakemake
 **/.showyourwork*
 
-*DS_Store
+data.tgz
+*.DS_Store
 # Showyourwork output files
 /*.pdf
 report.html
