@@ -1,7 +1,8 @@
 channels:
   - conda-forge
 dependencies:
-  - numpy=2.2.6
-  - pip=25.1.1
-  - python=3.10
-  - matplotlib==3.10
+  - numpy
+  - pip
+  - python=3.11
+  - hcipy=0.7
+  - setuptools=72.1 # bug in later versions prevents hcipy 0.7 from working

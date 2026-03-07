@@ -1,12 +1,13 @@
 # Snakemake and showyourwork temporaries
 **/.snakemake
 **/.showyourwork*
-
+**/.DS_Store
 # Showyourwork output files
 /*.pdf
 report.html
 arxiv.tar.gz
 
+overleaf/
 # Figure output
 src/tex/figures/*
 
