@@ -16,7 +16,7 @@ The article and associated data can be compiled and built locally with:
 
     pip install -U showyourwork
     git clone https://github.com/mkenworthy/ERIS_gvAPP.git
-    cd BetaPiccHS
+    cd ERIS_gvAPP
     showyourwork build
 
 ...and the article will be built in about 30 minutes.
