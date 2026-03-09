@@ -10,6 +10,8 @@
 
 *Matthew A. Kenworthy, et al.*
 
+Accepted for publication 06 Mar 2026 in Astronomy and Astrophysics
+
 An open source scientific article created using the [showyourwork](https://github.com/showyourwork/showyourwork) workflow.
 
 The article and associated data can be compiled and built locally with:
