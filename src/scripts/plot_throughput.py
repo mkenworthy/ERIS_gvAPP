@@ -1,3 +1,5 @@
+# MAK note: this works locally but because of astroquery cacheing weirdness, it doesn't work on showyourwork.
+
 import os
 
 import numpy as np
