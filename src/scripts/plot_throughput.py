@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from astroquery.svo_fps import SvoFps
 import paths
 
-params = {'text.usetex' : True,
+params = {#'text.usetex' : True,
           'font.size' : 8,
           'font.family' : 'lmodern',
           # 'text.latex.unicode': True,
