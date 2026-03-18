@@ -5,5 +5,8 @@ dependencies:
   - pip
   - python=3.11
   - hcipy=0.7
+  - pandas
   - setuptools=72.1 # bug in later versions prevents hcipy 0.7 from working
   - cmocean # for two halves composite
+  - pip:
+    - astroquery
