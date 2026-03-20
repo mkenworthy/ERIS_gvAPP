@@ -68,17 +68,17 @@ cc_curves_to_plot['K-peak'] = [trap_kpeak,trap_kpeak_err,
 
 #import os
 #os.environ["PATH"] += os.pathsep + '/Library/TeX/texbin'
-import os
-from pathlib import Path as Pathxx
-os.environ["PATH"] += os.pathsep + str(Pathxx.home() / "bin")
+# import os
+# from pathlib import Path as Pathxx
+# os.environ["PATH"] += os.pathsep + str(Pathxx.home() / "bin")
 
-#Direct input
-plt.rcParams['text.latex.preamble']=r'\usepackage{lmodern} \usepackage{amsmath}'
+# #Direct input
+# plt.rcParams['text.latex.preamble']=r'\usepackage{lmodern} \usepackage{amsmath}'
 
 #Options
-params = {'text.usetex' : True,
+params = {#'text.usetex' : True,
           'font.size' : 8,
-          'font.family' : 'lmodern',
+          #'font.family' : 'lmodern',
           # 'text.latex.unicode': True,
           }
 plt.rcParams.update(params)
