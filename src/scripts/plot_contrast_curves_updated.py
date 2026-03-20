@@ -1,4 +1,4 @@
-debug=1
+debug=0
 
 import numpy as np
 import pandas as pd
@@ -68,6 +68,9 @@ cc_curves_to_plot['K-peak'] = [trap_kpeak,trap_kpeak_err,
 
 #import os
 #os.environ["PATH"] += os.pathsep + '/Library/TeX/texbin'
+import os
+from pathlib import Path as Pathxx
+os.environ["PATH"] += os.pathsep + str(Pathxx.home() / "bin")
 
 #Direct input
 plt.rcParams['text.latex.preamble']=r'\usepackage{lmodern} \usepackage{amsmath}'
