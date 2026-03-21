@@ -229,7 +229,7 @@ os.environ["PATH"] += os.pathsep + str(Pathxx.home() / "bin")
 plt.rcParams['text.latex.preamble']=r'\usepackage{lmodern} \usepackage{amsmath}'
 
 #Options
-params = {'text.usetex' : True,
+params = {#'text.usetex' : True,
           'font.size' : 8,
           'font.family' : 'lmodern',
  #         'text.latex.unicode': True
@@ -259,7 +259,8 @@ codes = [
 # Create the Path object for the upside-down 'T'
 upside_down_T = Path(verts, codes)
 
-fig, ax = plt.subplots(ncols=2, dpi=200, figsize=(7.2, 2.2), gridspec_kw={'width_ratios': [1, 0.7]})
+#fig, ax = plt.subplots(ncols=2, dpi=200, figsize=(7.2, 2.2), gridspec_kw={'width_ratios': [1, 0.7]})
+fig, ax = plt.subplots(ncols=2, figsize=(7.2, 2.2), gridspec_kw={'width_ratios': [1, 0.7]})
 
 # --- THROUGHPUT PLOT ---
 
