@@ -229,7 +229,7 @@ os.environ["PATH"] += os.pathsep + str(Pathxx.home() / "bin")
 plt.rcParams['text.latex.preamble']=r'\usepackage{lmodern} \usepackage{amsmath}'
 
 #Options
-params = {#'text.usetex' : True,
+params = {'text.usetex' : True,
           'font.size' : 8,
           'font.family' : 'lmodern',
  #         'text.latex.unicode': True
