@@ -138,6 +138,6 @@ twin_ax.set_ylim(y_lim_mag)
 
 ax.legend()
 plt.tight_layout()
-plt.savefig(paths.figures / 'contrast_curves_updated.pdf',dpi=500)
+plt.savefig(paths.figures / 'contrast_curves_updated.pdf')
 if debug:
       plt.show()
