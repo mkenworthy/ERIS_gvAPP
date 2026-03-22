@@ -118,7 +118,7 @@ def radial_cut_app(image,
     px_length = np.abs(np.sqrt((ap_pos[:,0]-position[side][0])**2 + (ap_pos[:, 1]-position[side][1])**2))
 
     if plot:
-        fig, ax = plt.subplots(dpi=150)
+        fig, ax = plt.subplots()
         plt.imshow(np.log10(image), origin='lower', cmap=thermal, vmin=0)
         plt.scatter(position[side][0], position[side][1], marker='x', color='w')
         plt.scatter(np.array(ap_pos)[:,0], np.array(ap_pos)[:,1], marker='.', color='w')
@@ -137,7 +137,7 @@ def radial_cut_app(image,
     stds = np.array([s.std for s in stats])
 
     if plot:
-        fig, ax = plt.subplots(dpi=150)
+        fig, ax = plt.subplots()
         ax.plot(px_range / lod_px, sums, color='k')
         ax.fill_between(px_range / lod_px, sums-stds, sums+stds, alpha=0.5, color='k')
         ax.set_yscale('log')
@@ -350,10 +350,10 @@ size = pos_sat['left'][0]
 sat_sci_cut = sat_sci[pos_sat['left'][1]-size:pos_sat['left'][1]+size,
                   pos_sat['left'][0]-size:pos_sat['left'][0]+size]
 
-#img = ax[1].imshow(np.log10(np.abs(sat_sci / norm_sat)), cmap=thermal, origin='lower', vmin=np.log10(3e-6), vmax=0)
+img = ax[1].imshow(np.log10(np.abs(sat_sci / norm_sat)), cmap=thermal, origin='lower', vmin=np.log10(3e-6), vmax=0)
 
 # add colorbar to right of image
-#cbar = plt.colorbar(img, ax=ax[1], fraction=0.046, pad=0.25, label=r'$\mathrm{log_{10}}$(Raw contrast)')
+cbar = plt.colorbar(img, ax=ax[1], fraction=0.046, pad=0.25, label=r'$\mathrm{log_{10}}$(Raw contrast)')
 
 
 # rotate the above line by 10 deg
