@@ -8,9 +8,12 @@ import matplotlib.pyplot as plt
 from astroquery.svo_fps import SvoFps
 import paths
 
+# from pathlib import Path as Pathxx
+# os.environ["PATH"] += os.pathsep + str(Pathxx.home() / "bin")
+
 params = {#'text.usetex' : True,
           'font.size' : 8,
-          'font.family' : 'lmodern',
+          #'font.family' : 'lmodern',
           # 'text.latex.unicode': True,
           }
 plt.rcParams.update(params)
@@ -98,13 +101,6 @@ for f in filts:
                alpha=0.2,
                color='dodgerblue',
                lw=0)
-#     
-# for f in filts_long:
-#     ax.hlines(filts_long_tpts[f],
-#                 filts_long_wls[f][0] - filts_long_wls[f][1] / 2,
-#                 filts_long_wls[f][0] + filts_long_wls[f][1] / 2,
-#                 color='dodgerblue',
-#                 lw=0.5)
 
 ax.set_xlabel(r'Wavelength [$\mathrm{\mu m}$]')
 ax.set_ylabel(r'Transmission [\%]')
