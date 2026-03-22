@@ -120,7 +120,8 @@ twin_ax =plt.twinx()
 
 twin_ax.set_yticks(minor=False,ticks=np.arange(13))
 twin_ax.set_yticks(minor=True,ticks=np.arange(0,13,0.5))
-twin_ax.set_ylabel(r'$5\sigma_{\scriptscriptstyle\mathcal{N}}$ post-proc. contrast [$\Delta$mag]')
+#twin_ax.set_ylabel(r'$5\sigma_{\scriptscriptstyle\mathcal{N}}$ post-proc. contrast [$\Delta$mag]')
+twin_ax.set_ylabel(r'$5\sigma$ post-proc. contrast [$\Delta$mag]')
 
 # x-axis
 ax.set_xticks(ticks=np.arange(20))
