@@ -111,7 +111,8 @@ plt.fill_between(x=trap_kpeak['separation [px]']*pixscale/lod_kpeak,y1=trap_kpea
 # first y-axis
 plt.yscale('log')
 ax = plt.gca()
-plt.ylabel(r'$5\sigma_{\scriptscriptstyle\mathcal{N}}$ post-proc. contrast')
+plt.ylabel(r'$5\sigma$ post-proc. contrast')
+#plt.ylabel(r'$5\sigma_{\scriptscriptstyle\mathcal{N}}$ post-proc. contrast')
 
 y_lim_mag = np.array([12.5,2.5])
 ax.set_ylim(mag_to_c(y_lim_mag))
