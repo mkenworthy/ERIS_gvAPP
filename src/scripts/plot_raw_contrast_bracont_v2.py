@@ -221,17 +221,17 @@ lab_data = pd.read_csv(paths.data / 'lab_performance.csv',
                       header=0)
 
 #os.environ["PATH"] += os.pathsep + '/Library/TeX/texbin'
-# import os
-# from pathlib import Path as Pathxx
-# os.environ["PATH"] += os.pathsep + str(Pathxx.home() / "bin")
+import os
+from pathlib import Path as Pathxx
+os.environ["PATH"] += os.pathsep + str(Pathxx.home() / "bin")
 
 # #Direct input
 # plt.rcParams['text.latex.preamble']=r'\usepackage{lmodern} \usepackage{amsmath}'
 
 #Options
-params = {#'text.usetex' : True,
+params = {'text.usetex' : True,
           'font.size' : 8,
-          #'font.family' : 'lmodern',
+          'font.family' : 'lmodern',
  #         'text.latex.unicode': True
           }
 plt.rcParams.update(params)
