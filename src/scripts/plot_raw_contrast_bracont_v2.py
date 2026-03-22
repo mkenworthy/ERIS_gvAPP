@@ -350,10 +350,10 @@ size = pos_sat['left'][0]
 sat_sci_cut = sat_sci[pos_sat['left'][1]-size:pos_sat['left'][1]+size,
                   pos_sat['left'][0]-size:pos_sat['left'][0]+size]
 
-img = ax[1].imshow(np.log10(np.abs(sat_sci / norm_sat)), cmap=thermal, origin='lower', vmin=np.log10(3e-6), vmax=0)
+#img = ax[1].imshow(np.log10(np.abs(sat_sci / norm_sat)), cmap=thermal, origin='lower', vmin=np.log10(3e-6), vmax=0)
 
 # add colorbar to right of image
-cbar = plt.colorbar(img, ax=ax[1], fraction=0.046, pad=0.25, label=r'$\mathrm{log_{10}}$(Raw contrast)')
+#cbar = plt.colorbar(img, ax=ax[1], fraction=0.046, pad=0.25, label=r'$\mathrm{log_{10}}$(Raw contrast)')
 
 
 # rotate the above line by 10 deg
