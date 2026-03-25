@@ -8,7 +8,7 @@
 
 # The VLT/ERIS grating vector Apodizing Phase Plate coronagraph
 
-*Matthew A. Kenworthy, et al.*
+*M. A. Kenworthy, F. A. Dannert, J. Hayoz, D. Doelman, B. J. Sutlieff, P. Liu, F. Snik, M. J. Bonse, S. P. Quanz, C. U. Keller, O. Absil, G. Orban de Xivry, R. J. De Rosa, C. Ginski, X. Chen, A. Zurlo, B. A. Biller, J. L. Birkby, A. Baruffolo, Y. Dalliliar, R. Davies, M. Dolci, H. Feuchtgruber, A. Glauser, P. Grani, K. Kravchenko, M. MacIntosh, A. Puglisi, C. Rau, A. Riccardi, E. Sturm, and W. Taylor*
 
 Accepted for publication 06 Mar 2026 in Astronomy and Astrophysics
 

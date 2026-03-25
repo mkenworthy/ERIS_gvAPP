@@ -1,15 +1,15 @@
 channels:
   - conda-forge
 dependencies:
-  - numpy
-  - pip
+  - numpy=2.4.3
+  - pip=26.0.1
   - python=3.11
   - hcipy=0.7
-  - pandas
-  - h5py
-  - scikit-image
-  - photutils
+  - pandas=3.0.1
+  - h5py=3.16.0
+  - scikit-image=0.26.0
+  - photutils=2.3.0
   - setuptools=72.1 # bug in later versions prevents hcipy 0.7 from working
-  - cmocean # for two halves composite
+  - cmocean=4.0.3 # for two halves composite
   - pip:
     - astroquery
